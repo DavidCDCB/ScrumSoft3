@@ -66,25 +66,33 @@ const assignOperator = inOperator => {
 		operator = inOperator;
 	}
 	else {
-		num1 = operate();
-		operator = operator;
+		operationResult();
+		operator = inOperator;
 	}
 };
 
 const operationResult = () => {
 	if (operator == "+") {
-		return num1 + num2;
+		num1 = num1 + num2;
 	}
 	else if (operator == "-") {
-		return num1 - num2;
+		num1 = num1 - num2;
 	}
 	else if (operator == "*") {
-		return num1 * num2;
+		num1 = num1 * num2;
 	}
 	else if (operator == "÷") {
 		if (num2 != 0) {
-			return num1 / num2;
+			num1 = num1 / num2;
 		}
-		return "Math Error"
+		else {
+			num1 = Infinity
+			num2 = Infinity
+			operator = null;
+			return "Math Error"
+		}
 	}
+	num2 = Infinity
+	operator = null;
+	return num1;
 }
