@@ -1,6 +1,6 @@
 body{
 	background-color: black;
-	background-image: url("https://wallpaper.dog/large/5502359.jpg");
+	background-image: url("https://wallpapercave.com/wp/wp7720121.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: 'Chakra Petch', sans-serif;
@@ -28,3 +28,8 @@ body{
     background-color: transparent;
 	color:#8030d4;
 }
+
+.container{
+	margin-right: 10%;
+}
+
