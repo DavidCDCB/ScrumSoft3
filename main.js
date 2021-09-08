@@ -8,7 +8,12 @@ var operator = null;
 
 ((doc, win) => {
 	doc.addEventListener('DOMContentLoaded',event => {
-		// ...
+
+		doc.querySelectorAll('.number').forEach((x)=>{
+			x.addEventListener('click',(cb)=>{
+				console.log(cb.target.textContent);
+			});
+		});
 	});
 })(document, window);
 
