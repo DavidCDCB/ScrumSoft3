@@ -24,6 +24,7 @@ function obtenerValores() {
 	btnNumber.forEach(function (boton) {
 		boton.addEventListener('click', function () {
 			assignNumber(parseInt(boton.innerText));
+			
 			console.log(num1, operator, num2);
 		})
 	});
@@ -34,12 +35,40 @@ function obtenerValores() {
 		})
 	});
 	btnIgual.addEventListener('click', function () {
-		alert(operationResult());
+		
+		operationResult();
 	});
 	btnBorrar.addEventListener('click', function () {
-		//borrar();
-		//ActualizarDsiplay();
+		Borrar();
+		ActualizarDisplay();
 	});
+
+}
+function Borrar(){
+	num1= Infinity;
+	num2 =Infinity
+	operator = null;
+	document.getElementById("imprimir").value ="";
+}
+
+function ActualizarDisplay(){
+	let numero1, numero2, operador;
+	if (num1 == Infinity){
+		numero1 = "";
+	}else{
+		numero1 = num1.toString();
+	}
+	if (num2 == Infinity){
+		numero2 = "";
+	}else{
+		numero2 = num2.toString();
+	}
+	if (operator == null){
+		operador = "";
+	}else{
+		operador = operator;
+	}
+	document.getElementById("imprimir").value = numero1 +operador+ numero2;
 
 }
 const assignNumber = number => {
@@ -59,6 +88,7 @@ const assignNumber = number => {
 			num2 = (num2 * 10) + number;
 		}
 	}
+	ActualizarDisplay();
 };
 
 const assignOperator = inOperator => {
@@ -69,16 +99,18 @@ const assignOperator = inOperator => {
 		operationResult();
 		operator = inOperator;
 	}
+	ActualizarDisplay();
 };
 
 const operationResult = () => {
 	if (operator == "+") {
 		num1 = num1 + num2;
+
 	}
 	else if (operator == "-") {
 		num1 = num1 - num2;
 	}
-	else if (operator == "*") {
+	else if (operator == "x") {
 		num1 = num1 * num2;
 	}
 	else if (operator == "÷") {
@@ -89,10 +121,12 @@ const operationResult = () => {
 			num1 = Infinity
 			num2 = Infinity
 			operator = null;
+			ActualizarDisplay();
 			return "Math Error"
 		}
 	}
 	num2 = Infinity
 	operator = null;
+	ActualizarDisplay();
 	return num1;
 }
