@@ -8,16 +8,41 @@ var operator = null;
 
 ((doc, win) => {
 	doc.addEventListener('DOMContentLoaded',event => {
-
-		doc.querySelectorAll('.number').forEach((x)=>{
-			x.addEventListener('click',(cb)=>{
-				assignNumber(parseInt(cb.target.textContent));
-				console.log(num1);
-			});
-		});
+		obtenerValores();
+		
 	});
 })(document, window);
 
+function obtenerValores(){
+	const btnNumber = document.getElementsByName('numero');
+	
+		const btnOperacion = document.getElementsByName('operacion');
+		const btnIgual = document.getElementsByName('igual')[0];
+		const btnBorrar = document.getElementsByName('borrar')[0];
+		
+		var result = document.getElementById('resultado');
+		btnNumber.forEach(function (boton) {
+			boton.addEventListener('click',function(){
+				//agregarNumero()
+				alert(boton.innerText);
+	})
+		});
+		btnOperacion.forEach(function (boton) {
+			boton.addEventListener('click',function(){
+				//SeleccionarOperacion()
+				alert(boton.innerText);
+	})
+		});
+		btnIgual.addEventListener('click',function(){
+			//caclcular();
+			//ActualizarDisplay();
+		});
+		btnBorrar.addEventListener('click',function(){
+			//borrar();
+			//ActualizarDsiplay();
+		});
+		
+}
 const assignNumber = number => {
 	if (operator == null) {
 		if (num1 === Infinity) {
