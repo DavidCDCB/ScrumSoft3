@@ -33,3 +33,19 @@ body{
 	margin-right: 10%;
 }
 
+input{
+    text-align: right;
+}
+
+.form-control{
+    background-color: transparent !important;
+    color: white !important;
+	font-size: 2em !important;
+}
+
+p{
+	font-size: 3em !important;
+	color: white !important;
+	border-color: #6e11d4;
+	text-shadow: 5px 5px rgb(255, 0, 234) !important;
+}
