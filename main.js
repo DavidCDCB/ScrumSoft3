@@ -24,7 +24,7 @@ const assignNumber = number => {
 			num1 = number;
 		}
 		else {
-			num1 += number * 10 ** num1.toString().length+1;
+			num1 = (num1*10) + number;
 		}
 	}
 	else {
@@ -32,7 +32,7 @@ const assignNumber = number => {
 			num2 = number;
 		}
 		else {
-			num2 += number * 10 ** num2.toString().length+1;
+			num2 = (num2*10) + number;
 		}
 	}
 };
