@@ -1,0 +1,30 @@
+body{
+	background-color: black;
+	background-image: url("https://wallpaper.dog/large/5502359.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Chakra Petch', sans-serif;
+}
+
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl  {
+    max-width: 350px;  
+}
+
+.contenido{
+    background-color:#1c1c1c;
+	box-shadow: 0 0 10px #6e11d4;
+}
+
+.btn-primary{
+    padding: 10px;
+    font-size: 3em;
+    background-color: transparent;
+    margin: 1px;
+    border-color:#6e11d4;
+    color:#6e11d4;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+    background-color: transparent;
+	color:#8030d4;
+}
