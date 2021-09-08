@@ -11,7 +11,8 @@ var operator = null;
 
 		doc.querySelectorAll('.number').forEach((x)=>{
 			x.addEventListener('click',(cb)=>{
-				console.log(cb.target.textContent);
+				assignNumber(parseInt(cb.target.textContent));
+				console.log(num1);
 			});
 		});
 	});
@@ -23,7 +24,7 @@ const assignNumber = number => {
 			num1 = number;
 		}
 		else {
-			num1 += number * num1.toString().length+1;
+			num1 += number * 10 ** num1.toString().length+1;
 		}
 	}
 	else {
@@ -31,7 +32,7 @@ const assignNumber = number => {
 			num2 = number;
 		}
 		else {
-			num2 += number * num2.toString().length+1;
+			num2 += number * 10 ** num2.toString().length+1;
 		}
 	}
 };
