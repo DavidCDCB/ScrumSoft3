@@ -17,16 +17,26 @@ var operator = null;
 	});
 })(document, window);
 
-function assignNumber(number) {
-	if (num1 === Infinity) {
-		num1 = number;
+const assignNumber = number => {
+	if (operator == null) {
+		if (num1 === Infinity) {
+			num1 = number;
+		}
+		else {
+			num1 += number * num1.toString().length+1;
+		}
 	}
-	else if (num2 === Infinity) {
-		num2 = number;
+	else {
+		if (num2 === Infinity) {
+			num2 = number;
+		}
+		else {
+			num2 += number * num2.toString().length+1;
+		}
 	}
-}
+};
 
-function assignOperator(inOperator) {
+const assignOperator = inOperator => {
 	if (operator == null) {
 		operator = inOperator;
 	}
@@ -34,9 +44,9 @@ function assignOperator(inOperator) {
 		num1 = operate();
 		operator = operator;
 	}
-}
+};
 
-function operate() {
+const operationResult = () => {
 	if (operator == "+") {
 		return num1 + num2;
 	}
