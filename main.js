@@ -121,12 +121,11 @@ const operationResult = () => {
 			num1 = Infinity
 			num2 = Infinity
 			operator = null;
+			num1 = "Math Error"
 			ActualizarDisplay();
-			return "Math Error"
 		}
 	}
 	num2 = Infinity
 	operator = null;
 	ActualizarDisplay();
-	return num1;
 }

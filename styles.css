@@ -8,6 +8,8 @@ body{
 
 .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl  {
     max-width: 350px;  
+	-webkit-box-reflect: below 10px linear-gradient(transparent, #0009); 
+	transition: 0.5s;
 }
 
 .contenido{
